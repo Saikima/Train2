@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Changer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="changeColorButton">Change Color</button>
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+const button = document.getElementById("changeColorButton");
+
+button.addEventListener("click", function() {
+  if (this.style.backgroundColor === "rgb(52, 152, 219)") {
+    this.style.backgroundColor = "#f1c40f";
+    this.textContent = "Change Back";
+  } else {
+    this.style.backgroundColor = "#3498db";
+    this.textContent = "Change Color";
+  }
+});
